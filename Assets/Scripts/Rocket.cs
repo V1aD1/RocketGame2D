@@ -29,14 +29,11 @@ public class Rocket : MonoBehaviour {
 		Debug.Log("Rocket destroyed!");
 
 		explosionEffectClone = (Transform) Instantiate (explosionEffect, transform.position, Quaternion.Euler(0,0,0));
-
-		print("rotation of explosion before rot: "+explosionEffectClone.transform.eulerAngles);
-		Vector3 rot = new Vector3(-1*transform.eulerAngles.z + 90, 90, 0);
 		
-		print("rotation rot: "+rot);
+		//this rotation determines the direction to apply the explosion in
+		Vector3 rot = new Vector3(-1*transform.eulerAngles.z + 90, 90, 0);
 
 		explosionEffectClone.transform.Rotate (rot);
-		print("rotation of explosion after rot: "+explosionEffectClone.transform.eulerAngles);
 
 		print ("created the explosion!!");
 		Destroy (this.gameObject);
