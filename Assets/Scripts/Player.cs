@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 //This class assumes player character is a child of the grid object
@@ -60,7 +60,7 @@ public class Player : MonoBehaviour {
 	}
 
 	void NewDir(Vector3 dir){
-		//print ("Changing dir!!");
+		print ("Player" + playerNum + " changed direction to "+dir);
 		currentDir = dir;
 	}
 
@@ -162,11 +162,11 @@ public class Player : MonoBehaviour {
 		Transform rocketClone = (Transform) Instantiate (rocket, transform.position + dir * (cellLength / 2), Quaternion.Euler (0, 0, 0));
 		Vector3 rot = Vector3.one;
 		if (dir == Vector3.right)
-			rot = new Vector3 (0, 0, 90);
+			rot = new Vector3 (0, 0, -90);
 		else if (dir == Vector3.down)
 			rot = new Vector3 (0, 0, 180);
 		else if (dir == Vector3.left)
-			rot = new Vector3 (0, 0, -90);
+			rot = new Vector3 (0, 0, 90);
 
 		
 		rocketClone.Rotate (rot);

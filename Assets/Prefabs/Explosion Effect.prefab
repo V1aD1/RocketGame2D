@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106918}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 6.3808885, y: -6.989471, z: -0.21941829}
+  m_LocalPosition: {x: -1.4443047, y: -3.7142458, z: -0.21941829}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -49,7 +49,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106918}
   serializedVersion: 2
-  lengthInSec: 5
+  lengthInSec: 0.2
   startDelay:
     scalar: 0
     maxCurve:
@@ -87,7 +87,7 @@ ParticleSystem:
     minMaxState: 0
   speed: 1
   randomSeed: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   moveWithTransform: 1
@@ -96,7 +96,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     startLifetime:
-      scalar: 0.4
+      scalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -131,7 +131,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startSpeed:
-      scalar: 25
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -401,14 +401,14 @@ ParticleSystem:
       minMaxState: 0
     randomizeRotationDirection: 0
     gravityModifier: 0
-    maxNumParticles: 1000
+    maxNumParticles: 220
     rotation3D: 0
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 0
+    type: 4
     radius: 1
-    angle: 25
+    angle: 56.62
     length: 5
     boxX: 1
     boxY: 1
@@ -428,7 +428,7 @@ ParticleSystem:
     serializedVersion: 2
     m_Type: 0
     rate:
-      scalar: 256.03
+      scalar: 388.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
