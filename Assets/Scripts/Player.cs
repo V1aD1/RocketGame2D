@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 //This class assumes player character is a child of the grid object
 public class Player : MonoBehaviour {
@@ -43,6 +44,17 @@ public class Player : MonoBehaviour {
 		if (col.gameObject.name.Contains ("ocket")) {
 			this.hp -= col.gameObject.GetComponent<Rocket>().damage;
 		}
+	}
+
+	//particleSystem is the particle system whose particles cause the collision
+	void OnParticleCollision(GameObject other){
+		ParticleSystem part = other.GetComponent<ParticleSystem>();
+		
+		ParticleCollisionEvent[] collisionEvents = new ParticleCollisionEvent[100];
+		int numParticles = ParticlePhysicsExtensions.GetCollisionEvents (part, gameObject, collisionEvents);
+		
+		this.hp -= numParticles;
+		
 	}
 
 
@@ -95,8 +107,9 @@ public class Player : MonoBehaviour {
 	void FixedUpdate () {
 
 		if (this.hp <= 0) {
+			this.hp = 0;
 			print ("Player " + playerNum + " was destroyed!!");
-			Destroy (this.gameObject);
+			this.gameObject.SetActive (false);
 		}
 			
 
