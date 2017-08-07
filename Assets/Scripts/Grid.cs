@@ -17,7 +17,7 @@ public class Grid : MonoBehaviour {
 	public float cellLength = 2;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 
 		//player 1 
 		player1.transform.parent = transform;

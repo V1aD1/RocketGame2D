@@ -34,6 +34,8 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		print (transform.name);
+		print (transform.parent.name);
 		grid = transform.GetComponentInParent<Grid> ();
 		cellLength = grid.cellLength;
 	}
